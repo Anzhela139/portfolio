@@ -75,19 +75,19 @@ const swipedetect = (el) => {
         distY = e.pageY - startY;
         elapsedTime = new Date().getTime() - startTime;
 
-        If (elapsedTime <= allowedTime){
-            if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){
-                if ((distX > 0)) {
-                    if (isEnabled) {
-                        previousItem(currentItem);
-                    }
-                } else {
-                    if (isEnabled) {
-                        nextItem(currentItem);
-                    }
-                }
-            }
-        }
+		if (elapsedTime <= allowedTime){
+			if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){
+				if ((distX > 0)) {
+					if (isEnabled) {
+						previousItem(currentItem);
+					}
+				} else {
+					if (isEnabled) {
+						nextItem(currentItem);
+					}
+				}
+			}
+		}
         e.preventDefault();
     }, false);
 
@@ -121,19 +121,19 @@ const swipedetect = (el) => {
         distY = touchObj.pageY - startY;
         elapsedTime = new Date().getTime() - startTime;
 
-        If (elapsedTime <= allowedTime) {
-            if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
-                if (distX > 0) {
-                    if (isEnabled) {
-                        previousItem(currentItem);
+        if (elapsedTime <= allowedTime){
+            if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){
+                    if ((distX > 0)) {
+                        if (isEnabled) {
+                            previousItem(currentItem);
+                        }
+                    } else {
+                        if (isEnabled) {
+                            nextItem(currentItem);
+                        }
                     }
-                } else {
-                    if (isEnabled) {
-                        nextItem(currentItem);
-                    }
-                }
             }
-        }
+    }
         e.preventDefault();
     }, false);
 }
