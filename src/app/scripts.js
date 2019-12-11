@@ -145,5 +145,5 @@ let buttonUp = document.querySelector('nav-button_up');
 let buttonDown = document.querySelector('nav-button_down');
 
 buttonUp.addEventListener('click', function() {
-    
+    event.code = "PageUp";
 })
