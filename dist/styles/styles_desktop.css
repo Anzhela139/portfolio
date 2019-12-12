@@ -1,8 +1,17 @@
 /* sass src/scss/styles.scss dist/styles/styles_desktop.css */
-.section-1_wrapper {
+.section-1_wrapper, .section-3_wrapper, .section-4_wrapper {
   width: 85%;
   display: flex;
   justify-content: space-between;
+}
+
+.section-1_column {
+  flex-basis: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 28%;
 }
 
 body {
@@ -14,6 +23,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   scroll-behavior: smooth;
+  font-family: "Noto Sans", "Roboto", "Ubuntu", sans-serif;
 }
 
 main {
@@ -42,7 +52,6 @@ button {
   padding: 5px 15px;
   cursor: pointer;
 }
-
 button:hover {
   background-color: #4682B4;
 }
@@ -100,7 +109,6 @@ button:hover {
   justify-content: center;
   align-items: flex-start;
 }
-
 .nav_icon_menu:hover {
   background-color: #4682B4;
 }
@@ -112,10 +120,6 @@ button:hover {
   justify-content: space-evenly;
   align-items: flex-end;
   width: 100%;
-}
-
-.nav_profile_menu a:hover {
-  color: #4682B4;
 }
 
 .nav-buttons {
@@ -156,8 +160,16 @@ section {
   position: relative;
 }
 
-.section-1_title {
+.section-1_wrapper, .section-3_wrapper, .section-4_wrapper {
+  width: 85%;
+}
+
+.section-1_title,
+.section-2_title,
+.section-3_title,
+.section-4_title {
   width: 100%;
+  text-align: center;
 }
 
 .header-wrapper {
@@ -188,13 +200,14 @@ section {
 }
 */
 .section-2_title {
-  width: 100vw;
   font-size: 1.75rem;
+  margin: 0 auto;
 }
 
 .section-2_wrapper {
   position: relative;
   width: 100%;
+  height: 100%;
 }
 
 .carousel {
@@ -260,6 +273,15 @@ section {
   right: auto;
 }
 
+.control.left p, .control.right p {
+  background-color: lightGray;
+  border-radius: 50%;
+  padding: 5px 15px;
+}
+.control.left p:hover, .control.right p:hover {
+  background-color: gray;
+}
+
 .control.right {
   right: 0;
   left: auto;
@@ -270,7 +292,9 @@ section {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 84px;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: lighter;
 }
 
 .arrow.right {
@@ -311,12 +335,6 @@ section {
     left: 0;
   }
 }
-@media (max-width: 960px) {
-  .description {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 @media (max-width: 640px) {
   .arrow {
     display: none;
@@ -325,10 +343,58 @@ section {
   .project-name {
     display: none;
   }
+}
+.section-4 {
+  background-color: #65736E;
+  height: auto;
+}
 
-  .description {
-    border: 0;
-  }
+.section-4_img_wrapper {
+  width: 95%;
+}
+.section-4_img_wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.section-4 #contact_form {
+  padding-top: 20px;
+  width: 85%;
+  padding-left: 2%;
+  background-color: #464646;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  color: #fff;
+}
+.section-4 #contact_form label {
+  padding-bottom: 5px;
+}
+.section-4 #contact_form #contacts_email {
+  width: 80%;
+}
+.section-4 #contact_form #contacts_textarea {
+  width: 80%;
+  height: 30%;
+}
+.section-4 #contact_form .section-4_urgency_check {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 80%;
+}
+.section-4 #contact_form .section-4_urgency_check input {
+  margin: 0;
+  padding-right: 15px;
+}
+.section-4 #contact_form .section-4_privacy_check {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 80%;
+}
+.section-4 #contact_form .section-4_privacy_check input {
+  margin: 0;
+  padding-right: 15px;
 }
 
 /*# sourceMappingURL=styles_desktop.css.map */

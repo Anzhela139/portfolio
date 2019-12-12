@@ -1,10 +1,21 @@
 /* sass src/scss/styles.scss dist/styles/styles_desktop.css */
 $hover-color:#4682B4;
-%flex-columns {
+$text-font: "Noto Sans", "Roboto", "Ubuntu", sans-serif;
+%flex-wrapper {
     width: 85%;
     display: flex;
     justify-content: space-between;
 }
+
+%flex-column {
+    flex-basis: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 28%;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -14,6 +25,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     scroll-behavior: smooth;
+    font-family: $text-font;
 }
 
 main {
@@ -41,10 +53,9 @@ button {
     font-size: 1.5rem;
     padding: 5px 15px;
     cursor: pointer;
-}
-
-button:hover {
-    background-color: $hover-color;
+    &:hover {
+        background-color: $hover-color;
+    }
 }
 
 .header-menu {
@@ -99,10 +110,9 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-}
-
-.nav_icon_menu:hover {
-    background-color: $hover-color;
+    &:hover {
+        background-color: $hover-color;
+    }
 }
 
 .nav_profile_menu {
@@ -112,10 +122,6 @@ button:hover {
     justify-content: space-evenly;
     align-items: flex-end;
     width: 100%;
-}
-
-.nav_profile_menu a:hover {
-    color: $hover-color;
 }
 
 .nav-buttons {
@@ -156,13 +162,22 @@ section {
     position: relative;
 }
 
-.section-1_wrapper {
-    @extend %flex-columns;
+.section-1_wrapper, .section-3_wrapper, .section-4_wrapper {
+    @extend %flex-wrapper;
+    width: 85%;
 }
 
-.section-1_title {
+.section-1_title, 
+.section-2_title, 
+.section-3_title, 
+.section-4_title {
     width: 100%;
+    text-align: center;
 }
+
+.section-1_column {
+    @extend %flex-column;
+} 
 
 .header-wrapper {
     margin: 0;
@@ -192,13 +207,14 @@ section {
 */
 
 .section-2_title {
-    width: 100vw;
     font-size: 1.75rem;
+    margin: 0 auto;
 }
 
 .section-2_wrapper {
     position: relative;
     width: 100%;
+    height: 100%;
 }
 
 .carousel {
@@ -264,6 +280,15 @@ section {
     right: auto;
 }
 
+.control.left p, .control.right p {
+    background-color: lightGray;
+    border-radius: 50%;
+    padding: 5px 15px;
+    &:hover {
+        background-color: gray;
+    }
+}
+
 .control.right {
     right: 0;
     left: auto;
@@ -274,7 +299,9 @@ section {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 84px;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-weight: lighter;
 }
 
 .arrow.right {
@@ -319,13 +346,6 @@ section {
     }
 }
 
-@media (max-width: 960px) {
-    .description {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
 @media (max-width: 640px) {
     .arrow {
         display: none;
@@ -334,9 +354,58 @@ section {
     .project-name {
         display: none;
     }
+}
 
-    .description {
-        border: 0;
+.section-4 {
+    background-color: #65736E;
+    height: auto;
+}
+
+.section-4_img_wrapper {
+    width: 95%;
+    img {
+        width: 100%;
+        height: 100%;
     }
 }
 
+.section-4 #contact_form {
+    padding-top: 20px;
+    width: 85%;
+    padding-left: 2%;
+    background-color: #464646;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    color: #fff;
+    label {
+        padding-bottom: 5px;
+    }
+    #contacts_email {
+        width: 80%;
+
+    }
+    #contacts_textarea {
+        width: 80%;
+        height: 30%;
+    }
+    .section-4_urgency_check {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 80%;
+        input {
+            margin: 0;
+            padding-right: 15px;
+        }
+    }
+    .section-4_privacy_check {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 80%;
+        input {
+            margin: 0;
+            padding-right: 15px;
+        }
+    }
+}
