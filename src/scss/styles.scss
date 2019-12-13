@@ -16,6 +16,12 @@ $text-font: "Noto Sans", "Roboto", "Ubuntu", sans-serif;
     width: 28%;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -175,8 +181,11 @@ section {
     text-align: center;
 }
 
-.section-1_column {
+.section-1_column, .section-3_column {
     @extend %flex-column;
+    p {
+        text-align: center;
+    }
 } 
 
 .header-wrapper {
@@ -256,15 +265,14 @@ section {
     align-items: center;
     font-size: 1.35rem;
     justify-content: space-between;
+    img {
+        width: 70%;
+        height: 70%;
+    }
 }
 
 .project-name {
     padding: 10px;
-}
-
-.description img {
-    width: 70%;
-    height: 70%;
 }
 
 .control {

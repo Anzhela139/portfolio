@@ -5,13 +5,19 @@
   justify-content: space-between;
 }
 
-.section-1_column {
+.section-1_column, .section-3_column {
   flex-basis: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   width: 28%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -172,6 +178,10 @@ section {
   text-align: center;
 }
 
+.section-1_column p, .section-3_column p {
+  text-align: center;
+}
+
 .header-wrapper {
   margin: 0;
   display: flex;
@@ -250,14 +260,13 @@ section {
   font-size: 1.35rem;
   justify-content: space-between;
 }
-
-.project-name {
-  padding: 10px;
-}
-
 .description img {
   width: 70%;
   height: 70%;
+}
+
+.project-name {
+  padding: 10px;
 }
 
 .control {
