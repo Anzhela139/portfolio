@@ -41,7 +41,7 @@ main {
 header {
     width: 100vw;
     height: 100vh;
-    background: #131313 url(../../public/images/#) no-repeat center top /contain;
+    background: #131313 url(../../public/images/header-background.jpg) no-repeat center top /contain;
     color: white;
     display: flex;
     justify-content: center;
@@ -362,6 +362,11 @@ section {
     .project-name {
         display: none;
     }
+}
+
+.section-3_img_example {
+    width: 50%;
+    height: 30%;
 }
 
 .section-4 {
