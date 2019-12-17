@@ -144,6 +144,36 @@ swipedetect(el)
 let buttonUp = document.querySelector('nav-button_up');
 let buttonDown = document.querySelector('nav-button_down');
 
-buttonUp.addEventListener('click', function() {
-    event.code = "PageUp";
-})
+
+var form  = document.querySelector('#contact_form');
+var email = document.querySelector('#contacts_email');
+var urgencyCheckbox = document.querySelector('#contacts_urgency');
+var descriptionTextarea = document.querySelector('#contacts_textarea');
+var privacyCheckbox = document.querySelector('#contacts_privacy');
+var buttonSubmit = document.querySelector('#contacts_btn_submit');
+
+email.addEventListener('change', function(event) {
+ // Каждый раз, когда пользователь вводит что-либо, мы проверяем,
+  // является ли корректным поле электронной почты.
+  if (email.checkValidity() && descriptionTextarea.checkValidity() && privacyCheckbox.checkValidity()) {
+    // В случае появления сообщения об ошибке, если поле
+    // является корректным, мы удаляем сообщение об ошибке.
+    buttonSubmit 
+  }
+  else {
+    preventDefault;
+}
+}, false);
+form.addEventListener('submit', function(event) {
+  // Каждый раз, когда пользователь пытается отправить данные, мы проверяем
+   // валидность поля электронной почты.
+  if (!email.validity.valid) {
+    
+    // Если поле невалидно, отображается пользовательское
+    // сообщение об ошибке.
+    error.innerHTML = "I expect an e-mail, darling!";
+    error.className = "error active";
+    // И мы предотвращаем отправку формы путем отмены события
+    event.preventDefault();
+  }
+}, false);

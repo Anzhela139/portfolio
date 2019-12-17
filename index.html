@@ -166,18 +166,19 @@
                     </div>
                     <form id="contact_form" action="primer.ru" method="GET">
                         <label for="contacts_email">Ваш E-mail</label>
-                        <input type="email" id="contacts_email">
+                        <input type="email" name="contacts_email" id="contacts_email" required>
                         <div class="section-4_urgency_check">
-                            <input type="checkbox" id="contacts_urgency">
+                            <input type="checkbox" name="urgency_checkbox" id="contacts_urgency">
                             <label for="contacts_urgency">Проект срочный?</label>
                         </div>
                         <label for="contacts_textarea">Ваш проект</label>
-                        <textarea id="contacts_textarea" placeholder="Опишите Ваш проект">
+                        <textarea name="description_textarea" id="contacts_textarea" placeholder="Опишите Ваш проект" required>
                         </textarea>
                         <div class="section-4_privacy_check">
-                            <input type="checkbox" id="contacts_privacy">
+                            <input type="checkbox" name="privacy_checkbox" id="contacts_privacy" required>
                             <label for="contacts_privacy">Вы соглашаетесь с нашей политикой конфиденциальности</label>
                         </div>
+                        <button type="submit" id="contacts_btn_submit" disabled>Отправить</button>
                     </form>
                 </div>
             </section>
