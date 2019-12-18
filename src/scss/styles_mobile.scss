@@ -1,6 +1,7 @@
 /* sass src/scss/styles_mobile.scss dist/styles/styles_mobile.css */
 $hover-color:#4682B4;
 $text-font: "Noto Sans", "Roboto", "Ubuntu", sans-serif;
+$color16: #161616;
 %flex-wrapper {
     width: 85%;
     display: flex;
@@ -9,7 +10,6 @@ $text-font: "Noto Sans", "Roboto", "Ubuntu", sans-serif;
 }
 
 %flex-column {
-    flex-basis: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,13 +59,18 @@ button {
     &:hover {
         background-color: $hover-color;
     }
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
 }
 
 .header-menu {
-    width: 85%;
+    width: 100%;
+    height: 12%;
     display: flex;
-    align-items: flex-start;
-    margin-top: 5%;
+    align-items: center;
+    background-color: $color16;
     nav {
         width: 100%;
         height: auto;
@@ -73,7 +78,7 @@ button {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-content: flex-start;
+        align-content: flex-end;
         flex-wrap: wrap;
         ul {
             display: flex;
@@ -92,15 +97,39 @@ button {
                 }
             }
         }
-    }
-}
+        .nav_main_menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: space-between;
+            z-index: 5;
+            position: absolute;
+            width: 100%;
+            height: auto;
+            background-color: rgba(70, 130, 180, 0.7);
+            li {
+                a {
+                    display: block;
+                    padding: 15px 0;
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .nav_main_menu-mobile {
+            position: absolute;
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
 
-.nav_main_menu {
-    position: fixed;
-    z-index: 5;
-    display: flex;
-    justify-content: space-between;
-    width: 85%;
+            li {
+                button {
+                    border: none;
+                    padding: 0;
+                }
+            }
+        }
+    }
 }
 
 .nav_main_menu a:hover {
@@ -181,7 +210,7 @@ main {
 
 section {
     width: 100%;
-    height: 145vh;
+    height: 150vh;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -191,7 +220,7 @@ section {
 
 .section-1_wrapper, .section-3_wrapper, .section-4_wrapper {
     @extend %flex-wrapper;
-    height: 79%;
+    height: auto;
     width: 85%;
 }
 
@@ -201,14 +230,15 @@ section {
 .section-4_title {
     width: 100%;
     text-align: center;
-    height: 10%;
+    height: auto;
 }
 
 .section-1_column, .section-3_column {
     @extend %flex-column;
     background-color: #65736E;
     margin-top: 3%;
-    height: 50%;
+    height: auto;
+    padding-bottom: 3%;
     h3 {
         text-align: center;
         width: 100%;
@@ -234,7 +264,7 @@ section {
 }
 */
 .section-2 {
-    height: 100vh;
+    height: 60vh;
     .section-2_title {
         font-size: 1.75rem;
         margin: 0 auto;
@@ -243,7 +273,7 @@ section {
     .section-2_wrapper {
         position: relative;
         width: 90%;
-        height: 100%;
+        height: 85%;
     }
 }
 
@@ -371,7 +401,7 @@ section {
 
 .section-3_img_example {
     width: 80%;
-    height: 80%;
+    height: auto;
 }
 
 .section-4 {
@@ -380,6 +410,7 @@ section {
     .section-4_title {
         padding: 20px 0;
     }
+    padding-bottom: 5%;
 }
 
 .section-4_img_wrapper {
@@ -396,8 +427,9 @@ section {
     justify-content: flex-start;
     align-content: flex-start;
     color: #fff;
+    padding-bottom: 3%;
     label {
-        padding-bottom: 5px;
+        padding-bottom: 2%;
         display: block;
         width: 80%;
     }

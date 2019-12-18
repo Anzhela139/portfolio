@@ -1,4 +1,4 @@
-/* sass src/scss/styles.scss dist/styles/styles_desktop.css */
+/* sass src/scss/styles_desktop.scss dist/styles/styles_desktop.css */
 .section-1_wrapper, .section-3_wrapper, .section-4_wrapper {
   width: 85%;
   display: flex;
@@ -57,6 +57,10 @@ button {
 button:hover {
   background-color: #4682B4;
 }
+button a {
+  text-decoration: none;
+  color: #fff;
+}
 
 .header-menu {
   width: 85%;
@@ -89,6 +93,9 @@ button:hover {
 }
 .header-menu nav ul li a :hover {
   color: #f6f6f6;
+}
+.header-menu nav .nav_main_menu-mobile {
+  display: none;
 }
 
 .nav_main_menu {

@@ -58,6 +58,10 @@ button {
     &:hover {
         background-color: $hover-color;
     }
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
 }
 
 .header-menu {
@@ -89,6 +93,10 @@ button {
                     }
                 }
             }
+        }
+        
+        .nav_main_menu-mobile {
+            display: none;
         }
     }
 }
