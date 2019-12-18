@@ -158,10 +158,10 @@ email.addEventListener('change', function(event) {
   if (email.checkValidity() && descriptionTextarea.checkValidity() && privacyCheckbox.checkValidity()) {
     // В случае появления сообщения об ошибке, если поле
     // является корректным, мы удаляем сообщение об ошибке.
-    buttonSubmit 
+    buttonSubmit.disabled = false;
   }
   else {
-    preventDefault;
+    form.preventDefault;
 }
 }, false);
 form.addEventListener('submit', function(event) {
