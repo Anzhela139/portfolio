@@ -99,11 +99,11 @@ button a {
 }
 
 .nav_main_menu {
-  position: fixed;
+  position: relative;
   z-index: 5;
   display: flex;
   justify-content: space-between;
-  width: 85%;
+  width: 100%;
 }
 
 .nav_main_menu a:hover {
@@ -166,7 +166,7 @@ button a {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  width: auto;
+  width: 85%;
   flex-wrap: wrap;
 }
 .header-wrapper h1 {
@@ -385,7 +385,7 @@ section {
 }
 
 .section-4 {
-  background-color: #65736E;
+  background-color: #7da9d8;
   height: auto;
 }
 .section-4 .section-4_title {
@@ -404,7 +404,7 @@ section {
   padding-top: 20px;
   width: 85%;
   padding-left: 2%;
-  background-color: #464646;
+  background-color: #2f568f;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -476,9 +476,33 @@ section {
 }
 
 footer {
-  height: 10vh;
+  height: 15vh;
+  width: 100%;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+footer .footer-nav_sm_icons {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+}
+footer .footer-nav_sm_icons a {
+  text-decoration: none;
+  color: #2f568f;
+  text-transform: uppercase;
+}
+footer .footer-nav_sm_icons a span {
+  font-size: 1.15rem;
+}
+footer .footer-nav_sm_icons a span:hover {
+  background-color: #735ab5;
+  color: #fff;
+}
+footer p {
+  width: 85%;
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles_desktop.css.map */

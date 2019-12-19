@@ -177,3 +177,11 @@ form.addEventListener('submit', function(event) {
     event.preventDefault();
   }
 }, false);
+
+let menuMobile = document.querySelector('.nav_main_menu');
+let burgerButton = document.querySelector('#btn-burger_menu');
+
+burgerButton.onclick = function() {
+    menuMobile.classList.toggle('.active');
+    menuMobile.classList.toggle('hide-menu');
+};

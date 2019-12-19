@@ -1,4 +1,13 @@
 /* sass src/scss/styles_mobile.scss dist/styles/styles_mobile.css */
+$GigasLightShade1: rgba(115, 90, 181);
+$GigasLightShade2: rgba(99, 71, 160);
+$GigasDarkShade1: rgba(87, 58, 143);
+$GigasDarkShade2: rgba(76, 46, 126);
+
+$SteelBlueLightShade1: rgba(125, 169, 216);
+$SteelBlueLightShade2: rgba(92, 136, 189);
+$SteelBlueDarkShade1:rgba(69, 111, 167);
+$SteelBlueDarkShade2: rgba(47, 86, 143);
 $hover-color:#4682B4;
 $text-font: "Noto Sans", "Roboto", "Ubuntu", sans-serif;
 $color16: #161616;
@@ -67,14 +76,16 @@ button {
 
 .header-menu {
     width: 100%;
-    height: 12%;
+    height: auto;
     display: flex;
-    align-items: center;
-    background-color: $color16;
+    align-items: flex-start;
+    position: relative;
+    top: 0;
     nav {
         width: 100%;
-        height: auto;
+        height: 70vh;
         position: relative;
+        top: 0;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -104,6 +115,7 @@ button {
             align-content: space-between;
             z-index: 5;
             position: absolute;
+            top: 20%;
             width: 100%;
             height: auto;
             background-color: rgba(70, 130, 180, 0.7);
@@ -116,18 +128,45 @@ button {
                 }
             }
         }
+        .hide-menu {
+            display: none;
+        }
         .nav_main_menu-mobile {
             position: absolute;
+            z-index: 5;
+            top: 0;
             display: flex;
+            align-items: center;
             justify-content: flex-end;
             width: 100%;
-
-            li {
+            height: 20%;
+            background-color: $color16;
                 button {
                     border: none;
                     padding: 0;
+                    height: auto;
+                    cursor: pointer;
+                    padding: 30px;
+                    border-radius: 50%;
+                    span {
+                        display: block;
+                        background-color: #fff;
+                        width: 60px;
+                        height: 3px;
+                        border-radius: 5px;
+                        margin-bottom: 12px;
+                        opacity: 1;
+                        left: 0;
+                        transform: rotate(0deg);
+                        transition: .25s ease-in-out;
+                    }
+                    span:nth-child(3) {
+                        margin-bottom: 0;
+                    }
                 }
-            }
+                button:hover {
+                    background-color: rgba(70, 130, 180, 0.3);
+                }
         }
     }
 }
@@ -192,8 +231,10 @@ button {
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    width: auto;
+    width: 85%;
     flex-wrap: wrap;
+    position: absolute;
+    top: 40%;
     h1 {
         width: 100%;
         text-align: center;
@@ -405,7 +446,7 @@ section {
 }
 
 .section-4 {
-    background-color: #65736E;
+    background-color: $SteelBlueLightShade1;
     height: auto;
     .section-4_title {
         padding: 20px 0;
@@ -421,7 +462,7 @@ section {
     padding-top: 20px;
     width: 85%;
     padding-left: 2%;
-    background-color: #464646;
+    background-color: $SteelBlueDarkShade2;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -495,7 +536,31 @@ section {
 }
 
 footer {
-    height: 10vh;
+    height: 15vh;
+    width: 100%;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    .footer-nav_sm_icons {
+        display: flex;
+        justify-content: space-between;
+        width: 85%;
+        a {
+            text-decoration: none;
+            color: $SteelBlueDarkShade2;
+            text-transform: uppercase;
+            span {
+                font-size: 1.15rem;
+                &:hover {
+                    background-color: $GigasLightShade1;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    p {
+        width: 85%;
+        text-align: center;
+    }
 }

@@ -1,4 +1,13 @@
 /* sass src/scss/styles_desktop.scss dist/styles/styles_desktop.css */
+$GigasLightShade1: rgba(115, 90, 181);
+$GigasLightShade2: rgba(99, 71, 160);
+$GigasDarkShade1: rgba(87, 58, 143);
+$GigasDarkShade2: rgba(76, 46, 126);
+
+$SteelBlueLightShade1: rgba(125, 169, 216);
+$SteelBlueLightShade2: rgba(92, 136, 189);
+$SteelBlueDarkShade1:rgba(69, 111, 167);
+$SteelBlueDarkShade2: rgba(47, 86, 143);
 $hover-color:#4682B4;
 $text-font: "Noto Sans", "Roboto", "Ubuntu", sans-serif;
 %flex-wrapper {
@@ -102,11 +111,11 @@ button {
 }
 
 .nav_main_menu {
-    position: fixed;
+    position: relative;
     z-index: 5;
     display: flex;
     justify-content: space-between;
-    width: 85%;
+    width: 100%;
 }
 
 .nav_main_menu a:hover {
@@ -169,7 +178,7 @@ button {
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    width: auto;
+    width: 85%;
     flex-wrap: wrap;
     h1 {
         width: 100%;
@@ -395,7 +404,7 @@ section {
 }
 
 .section-4 {
-    background-color: #65736E;
+    background-color: $SteelBlueLightShade1;
     height: auto;
     .section-4_title {
         padding: 20px 0;
@@ -414,7 +423,7 @@ section {
     padding-top: 20px;
     width: 85%;
     padding-left: 2%;
-    background-color: #464646;
+    background-color: $SteelBlueDarkShade2;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -487,7 +496,31 @@ section {
 }
 
 footer {
-    height: 10vh;
+    height: 15vh;
+    width: 100%;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    .footer-nav_sm_icons {
+        display: flex;
+        justify-content: space-between;
+        width: 85%;
+        a {
+            text-decoration: none;
+            color: $SteelBlueDarkShade2;
+            text-transform: uppercase;
+            span {
+                font-size: 1.15rem;
+                &:hover {
+                    background-color: $GigasLightShade1;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    p {
+        width: 85%;
+        text-align: center;
+    }
 }

@@ -8,15 +8,23 @@
         <link rel="stylesheet" media="only screen and (max-width:640px)" href="dist/styles/styles_mobile.css">
         <link rel="stylesheet" media="only screen and (min-width:640px)" href="dist/styles/styles_desktop.css">
         <title>Портфолио Анжелы Абитовой</title>
+        <meta name="keywords" content="Портфолио веб-дизайнера, веб-дизайнер, веб-разработчик, услуги верстальщика, 
+        фронт-енд, front-end">
+        <meta name="description" content="Сайт-портфолио Анжелы Абитовой. Я - веб-дизайнер и веб-разработчик.
+        Здесь представлены мои расценки и работы">
     </head>
     <body>
         <header>
                 <div class="header-menu">
                     <nav class="header-nav">
-                        <ul class="nav_main_menu-mobile">
-                            <li><button><img src="" alt="menu burger"></button></li>
-                        </ul>
-                        <ul class="nav_main_menu">
+                        <div class="nav_main_menu-mobile">
+                            <button id="btn-burger_menu">
+                                <span class="nav-menu_burger"></span>
+                                <span class="nav-menu_burger"></span>
+                                <span class="nav-menu_burger"></span>
+                            </button>
+                        </div>
+                        <ul class="nav_main_menu hide-menu">
                             <li><a href="#mySkillset">Мои навыки</a></li>
                             <li><a href="#">Behance</a></li>
                             <li><a href="#myWorks">Мои проекты</a></li>
@@ -86,7 +94,7 @@
                                                 <div class="project-name">
                                                     Walter's watches
                                                 </div>
-                                                <a href="#"><img src="public/images/image-test1.jpeg" alt="photo my work" 
+                                                <a href="watches.html"><img src="public/images/image-test1.jpeg" alt="photo my work" 
                                                 width="450px" height="928px" class="section-2_img"></a>
                                             </div>
                                         </div>
@@ -95,7 +103,7 @@
                                                 <div class="project-name">
                                                     Siberian cosmetics
                                                 </div>
-                                                <a href="#"><img src="public/images/thumbpic-cosmetics.jpg" alt="photo my work" 
+                                                <a href="cosmetics.html"><img src="public/images/thumbpic-cosmetics.jpg" alt="photo my work" 
                                                 width="450px" height="928px" class="section-2_img"></a>
                                             </div>
                                         </div>
@@ -104,7 +112,7 @@
                                                 <div class="project-name">
                                                     Shape - sport shop
                                                 </div>
-                                                <a href="#"><img src="public/images/shape_sportshop.jpg" alt="photo my work" 
+                                                <a href="shape.html"><img src="public/images/shape_sportshop.jpg" alt="photo my work" 
                                                 width="450px" height="928px" class="section-2_img"></a>
                                             </div>
                                         </div>
@@ -113,7 +121,7 @@
                                                 <div class="project-name">
                                                     Coffee inspiration
                                                 </div>
-                                                <a href="#"><img src="public/images/image-test1.jpeg" alt="photo my work" 
+                                                <a href="coffee.html"><img src="public/images/image-test1.jpeg" alt="photo my work" 
                                                 width="450px" height="928px" class="section-2_img"></a>
                                             </div>
                                         </div>
@@ -195,6 +203,12 @@
             </section>
         </main>
         <footer>
+            <nav class="footer-nav_sm_icons">
+                <a href="#" class="footer-nav_icon_sm"><span class="footer-nav_icon_sm__span">VK</span></a>
+                <a href="#" class="footer-nav_icon_sm"><span class="footer-nav_icon_sm__span">Facebook</span></a>
+                <a href="#" class="footer-nav_icon_sm"><span class="footer-nav_icon_sm__span">Instagram</span></a>
+                <a href="#" class="footer-nav_icon_sm"><span class="footer-nav_icon_sm__span">Telegram</span></a>
+            </nav>
             <p class="footer_text">Copyrights, Anzhela Abitova. 2019.</p>
         </footer>
         <script src="src/app/scripts.js"></script>
