@@ -180,8 +180,11 @@ form.addEventListener('submit', function(event) {
 
 let menuMobile = document.querySelector('.nav_main_menu');
 let burgerButton = document.querySelector('#btn-burger_menu');
+let layersBurgerButton = document.querySelector('.nav-menu_burger');
 
 burgerButton.onclick = function() {
+    layersBurgerButton.classList.toggle('.btn-burger_menu_cross');
+    layersBurgerButton.classList.toggle('.btn-burger_menu');
     menuMobile.classList.toggle('.active');
     menuMobile.classList.toggle('hide-menu');
 };
