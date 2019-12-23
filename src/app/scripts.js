@@ -183,8 +183,7 @@ let burgerButton = document.querySelector('#btn-burger_menu');
 let layersBurgerButton = document.querySelector('.nav-menu_burger');
 
 burgerButton.onclick = function() {
-    layersBurgerButton.classList.toggle('.btn-burger_menu_cross');
-    layersBurgerButton.classList.toggle('.btn-burger_menu');
+    burgerButton.classList.toggle('.btn-burger_menu_cross');
     menuMobile.classList.toggle('.active');
     menuMobile.classList.toggle('hide-menu');
 };
