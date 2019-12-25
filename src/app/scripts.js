@@ -75,19 +75,19 @@ const swipedetect = (el) => {
         distY = e.pageY - startY;
         elapsedTime = new Date().getTime() - startTime;
 
-        If (elapsedTime <= allowedTime){
-            if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){
-                if ((distX > 0)) {
-                    if (isEnabled) {
-                        previousItem(currentItem);
-                    }
-                } else {
-                    if (isEnabled) {
-                        nextItem(currentItem);
-                    }
-                }
-            }
-        }
+		if (elapsedTime <= allowedTime){
+			if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){
+				if ((distX > 0)) {
+					if (isEnabled) {
+						previousItem(currentItem);
+					}
+				} else {
+					if (isEnabled) {
+						nextItem(currentItem);
+					}
+				}
+			}
+		}
         e.preventDefault();
     }, false);
 
@@ -121,22 +121,69 @@ const swipedetect = (el) => {
         distY = touchObj.pageY - startY;
         elapsedTime = new Date().getTime() - startTime;
 
-        If (elapsedTime <= allowedTime) {
-            if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
-                if (distX > 0) {
-                    if (isEnabled) {
-                        previousItem(currentItem);
+        if (elapsedTime <= allowedTime){
+            if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){
+                    if ((distX > 0)) {
+                        if (isEnabled) {
+                            previousItem(currentItem);
+                        }
+                    } else {
+                        if (isEnabled) {
+                            nextItem(currentItem);
+                        }
                     }
-                } else {
-                    if (isEnabled) {
-                        nextItem(currentItem);
-                    }
-                }
             }
-        }
+    }
         e.preventDefault();
     }, false);
 }
 
 let el = document.querySelector('.carousel');
 swipedetect(el)
+
+let buttonUp = document.querySelector('nav-button_up');
+let buttonDown = document.querySelector('nav-button_down');
+
+
+var form  = document.querySelector('#contact_form');
+var email = document.querySelector('#contacts_email');
+var urgencyCheckbox = document.querySelector('#contacts_urgency');
+var descriptionTextarea = document.querySelector('#contacts_textarea');
+var privacyCheckbox = document.querySelector('#contacts_privacy');
+var buttonSubmit = document.querySelector('#contacts_btn_submit');
+
+email.addEventListener('change', function(event) {
+ // Каждый раз, когда пользователь вводит что-либо, мы проверяем,
+  // является ли корректным поле электронной почты.
+  if (email.checkValidity() && descriptionTextarea.checkValidity() && privacyCheckbox.checkValidity()) {
+    // В случае появления сообщения об ошибке, если поле
+    // является корректным, мы удаляем сообщение об ошибке.
+    buttonSubmit.disabled = false;
+  }
+  else {
+    form.preventDefault;
+}
+}, false);
+form.addEventListener('submit', function(event) {
+  // Каждый раз, когда пользователь пытается отправить данные, мы проверяем
+   // валидность поля электронной почты.
+  if (!email.validity.valid) {
+    
+    // Если поле невалидно, отображается пользовательское
+    // сообщение об ошибке.
+    error.innerHTML = "I expect an e-mail, darling!";
+    error.className = "error active";
+    // И мы предотвращаем отправку формы путем отмены события
+    event.preventDefault();
+  }
+}, false);
+
+let menuMobile = document.querySelector('.nav_main_menu');
+let burgerButton = document.querySelector('#btn-burger_menu');
+let layersBurgerButton = document.querySelector('.nav-menu_burger');
+
+burgerButton.onclick = function() {
+    burgerButton.classList.toggle('.btn-burger_menu_cross');
+    menuMobile.classList.toggle('.active');
+    menuMobile.classList.toggle('hide-menu');
+};

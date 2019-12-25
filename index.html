@@ -2,51 +2,90 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta lang="en">
-        <link rel="stylesheet" href="dist/styles/styles_desktop.css">
-        <title>Portfolio of Anzhela Abitova</title>
+        <meta lang="ru">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" media="only screen and (max-width:640px)" href="dist/styles/styles_mobile.css">
+        <link rel="stylesheet" media="only screen and (min-width:640px)" href="dist/styles/styles_desktop.css">
+        <title>Портфолио Анжелы Абитовой</title>
+        <meta name="keywords" content="Портфолио веб-дизайнера, веб-дизайнер, веб-разработчик, услуги верстальщика, 
+        фронт-енд, front-end">
+        <meta name="description" content="Сайт-портфолио Анжелы Абитовой. Я - веб-дизайнер и веб-разработчик.
+        Здесь представлены мои расценки и работы">
     </head>
     <body>
         <header>
                 <div class="header-menu">
                     <nav class="header-nav">
-                        <ul class="nav_main_menu">
-                            <li><a href="#mySkillset">My skills</a></li>
-                            <li><a href="#myWorks">My works</a></li>                            
-                            <li><a href="#priceList">Price-list</a></li>
+                        <div class="nav_main_menu-mobile">
+                            <button id="btn-burger_menu">
+                                <span class="nav-menu_burger"></span>
+                                <span class="nav-menu_burger"></span>
+                                <span class="nav-menu_burger"></span>
+                            </button>
+                        </div>
+                        <ul class="nav_main_menu hide-menu">
+                            <li><a href="#mySkillset">Мои навыки</a></li>
+                            <li><a href="#">Behance</a></li>
+                            <li><a href="#myWorks">Мои проекты</a></li>
+                            <li><a href="#">GitHub</a></li>                            
+                            <li><a href="#priceList">Прайс-лист</a></li>
                         </ul>
-                        <ul class="nav_icon_menu">
+                        <!--<ul class="nav_icon_menu">
                             <li><a href="#"><img src="#" alt="nav icon social network"></a></li>
                             <li><a href="#"><img src="#" alt="nav icon social network"></a></li>
                             <li><a href="#"><img src="#" alt="nav icon social network"></a></li>
-                        </ul>
-                        <ul class="nav_profile_menu">
+                        </ul>-->
+                        <!--<input type="text" id="nav-input">-->
+                        <!--<div class="nav-buttons">
+                            <button class="nav-button_up">&uarr;</button>
+                            <button class="nav-button_down">&darr;</button>
+                        </div>-->
+                        <!--<ul class="nav_profile_menu">
                             <li><a href="#">Behance</a></li>
                             <li><a href="#">GitHub</a></li>
-                        </ul>
-                        <input type="text" id="nav-input">
-                        <button class="nav-button_up"><img src="#" alt=""></button>
-                        <button class="nav-button_down"><img src="#" alt=""></button>
+                        </ul>-->
                     </nav>
                 </div>
                 <div class="header-wrapper">
-                    <h1>Hello, I’m Anzhela Abitova</h1>
-                    <p>I’m web-designer and web-developer from Russia. 
-                    Currently, searching for interesting  and challenging projects.</p>
-                    <button class="header_button_call_to_action">Contact me</button>
+                    <h1>Здравствуйте, я Анжела Абитова</h1>
+                    <p>Я - веб-дизайнер и веб-разработчик из России. 
+                    В данное время, в поиске интересных проектов.</p>
+                    <button class="header_button_call_to_action"><a href="#contact_form">Связаться со мной</a></button>
                 </div>
         </header>
         <main>
             <section class="section-1" id="mySkillset">
-                <h2 class="section-1_title">My skillset</h2>
+                <h2 class="section-1_title">Мои навыки</h2>
                 <div class="section-1_wrapper">
-                    <h3>Design</h3>
-                    <h3>Layout</h3>
-                    <h3>Programming</h3>
+                    <div class="section-1_column">
+                        <h3 class="section-1_column_title">Дизайн</h3>
+                        <p class="section-1_column_text">
+                            Adobe Photoshop, Adobe Illustrator, Adobe After Effects, Figma.
+                        </p>
+                        <img src="public/images/main-catalog.jpg" alt="catalog SHAPE sportshop" width="1400" height="770" 
+                        class="section-3_img_example">
+                    </div>
+                    <div class="section-1_column">
+                        <h3 class="section-1_column_title">Верстка</h3 class="section-1_column_title">
+                        <p class="section-1_column_text">
+                            HTML5, CSS3, Git, SASS, Web-pack.
+                        </p>
+                        <img src="public/images/main-catalog.jpg" alt="catalog SHAPE sportshop" width="1400" height="770" 
+                        class="section-3_img_example">
+                    </div>
+                    <div class="section-1_column">
+                        <h3 class="section-1_column_title">Программирование</h3 class="section-1_column_title">
+                        <p class="section-1_column_text">
+                            Java-script, Jquery, Node.js
+                        </p>
+                        <img src="public/images/main-catalog.jpg" alt="catalog SHAPE sportshop" width="1400" height="770" 
+                        class="section-3_img_example">
+                    </div>
                 </div>
             </section>
             <section class="section-2" id="myWorks">
-                    <h2 class="section-2_title">My works</h2>
+                    <h2 class="section-2_title">Мои проекты</h2>
                     <div class="section-2_wrapper">
                         	<div class="carousel">
                                     <div class="item-container">
@@ -55,56 +94,53 @@
                                                 <div class="project-name">
                                                     Walter's watches
                                                 </div>
-                                                <img src="public/images/image-test.jpg" alt="photo my work" 
-                                                width="450px" height="928px" class="section-2_img">
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                                <div class="description">
-                                                    <div class="project-name">
-                                                        Walter's watches
-                                                    </div>
-                                                    <img src="public/images/image-test.jpg" alt="photo my work" 
-                                                width="450px" height="928px" class="section-2_img">
-                                                </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="description">
-                                                <div class="project-name">
-                                                    Walter's watches
-                                                </div>
-                                                <img src="public/images/image-test.jpg" alt="photo my work" 
-                                                width="450px" height="928px" class="section-2_img">
+                                                <a href="watches.html"><img src="public/images/image-test1.jpeg" alt="photo my work" 
+                                                width="450px" height="928px" class="section-2_img"></a>
                                             </div>
                                         </div>
                                         <div class="item">
                                             <div class="description">
                                                 <div class="project-name">
-                                                    Walter's watches
+                                                    Siberian cosmetics
                                                 </div>
-                                                <img src="public/images/image-test.jpg" alt="photo my work" 
-                                                width="450px" height="928px" class="section-2_img">
+                                                <a href="cosmetics.html"><img src="public/images/thumbpic-cosmetics.jpg" alt="photo my work" 
+                                                width="450px" height="928px" class="section-2_img"></a>
                                             </div>
                                         </div>
                                         <div class="item">
                                             <div class="description">
                                                 <div class="project-name">
-                                                    Walter's watches
+                                                    Shape - sport shop
                                                 </div>
-                                                <img src="public/images/image-test.jpg" alt="photo my work" 
-                                                width="450px" height="928px" class="section-2_img">
+                                                <a href="shape.html"><img src="public/images/shape_sportshop.jpg" alt="photo my work" 
+                                                width="450px" height="928px" class="section-2_img"></a>
                                             </div>
                                         </div>
-
+                                        <div class="item">
+                                            <div class="description">
+                                                <div class="project-name">
+                                                    Coffee inspiration
+                                                </div>
+                                                <a href="coffee.html"><img src="public/images/image-test1.jpeg" alt="photo my work" 
+                                                width="450px" height="928px" class="section-2_img"></a>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="description">
+                                                <div class="project-name">
+                                                    Color pallete
+                                                </div>
+                                                <a href="#"><img src="public/images/image-test1.jpeg" alt="photo my work" 
+                                                width="450px" height="928px" class="section-2_img"></a>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="control left">
-                                        <div class="arrow left">&lt;</div>
+                                        <div class="arrow left"><p>&lt;</p></div>
                                     </div>
                                     <div class="control right">
-                                            <div class="arrow right">&gt;</div>
+                                            <div class="arrow right"><p>&gt;</p></div>
                                         </div>
-                                        <button class="controls_prev">Назад</button>
-                                        <button class="controls_next">Вперед</button>
                                     </div>
                                 </div>
 
@@ -112,17 +148,69 @@
                     
             </section>
             <section class="section-3" id="priceList">
-                    <h2 class="section-3_title">Price-list</h2>
+                    <h2 class="section-3_title">Прайс-лист</h2>
                     <div class="section-3_wrapper">
-                        
+                        <div class="section-3_column">
+                            <h3 class="section-3_column_title">Дизайн Landing page</h3>
+                            <p class="section-3_column_text">
+                                5.000 рублей
+                            </p>
+                            <img src="public/images/main-catalog.jpg" alt="catalog SHAPE sportshop" width="1400" height="770" 
+                            class="section-3_img_example">
+                        </div>
+                        <div class="section-3_column">
+                            <h3 class="section-3_column_title">Дизайн и верстка Landing page</h3>
+                            <p class="section-3_column_text">
+                                    10.000-15.000 рублей
+                            </p>
+                            <img src="public/images/main-catalog.jpg" alt="catalog SHAPE sportshop" width="1400" height="770" 
+                            class="section-3_img_example">
+                        </div>
+                        <div class="section-3_column">
+                            <h3 class="section-3_column_title">Дизайн и верстка многостраничного сайта</h3>
+                            <p class="section-3_column_text">
+                                    0т 35.000 рублей
+                            </p>
+                            <img src="public/images/main-catalog.jpg" alt="catalog SHAPE sportshop" width="1400" height="770" 
+                            class="section-3_img_example">
+                        </div>
                     </div>
             </section>
             <section class="section-4" id="contacts">
-                <h2 class="section-4_title">Contact me</h2>
+                <h2 class="section-4_title">Связаться со мной</h2>
                 <div class="section-4_wrapper">
+                    <div class="section-4_img_wrapper">
+                        <img src="public/images/section-4_img.jpg" alt="photo of laptop" class="section-4_img" 
+                        width="3182" height="4009">
+                    </div>
+                    <form id="contact_form" action="primer.ru" method="GET">
+                        <label for="contacts_email">Ваш E-mail</label>
+                        <input type="email" name="contacts_email" id="contacts_email" required>
+                        <div class="section-4_urgency_check">
+                            <input type="checkbox" name="urgency_checkbox" id="contacts_urgency">
+                            <label for="contacts_urgency">Проект срочный?</label>
+                        </div>
+                        <label for="contacts_textarea">Ваш проект</label>
+                        <textarea name="description_textarea" id="contacts_textarea" placeholder="Опишите Ваш проект" required>
+                        </textarea>
+                        <div class="section-4_privacy_check">
+                            <input type="checkbox" name="privacy_checkbox" id="contacts_privacy" required>
+                            <label for="contacts_privacy">Вы соглашаетесь с нашей политикой конфиденциальности</label>
+                        </div>
+                        <button type="submit" id="contacts_btn_submit">Отправить</button>
+                    </form>
                 </div>
             </section>
         </main>
+        <footer>
+            <nav class="footer-nav_sm_icons">
+                <a href="#" class="footer-nav_icon_sm"><span class="footer-nav_icon_sm__span">VK</span></a>
+                <a href="#" class="footer-nav_icon_sm"><span class="footer-nav_icon_sm__span">FB</span></a>
+                <a href="#" class="footer-nav_icon_sm"><span class="footer-nav_icon_sm__span">IN</span></a>
+                <a href="#" class="footer-nav_icon_sm"><span class="footer-nav_icon_sm__span">Telegram</span></a>
+            </nav>
+            <p class="footer_text">Copyrights, Anzhela Abitova. 2019.</p>
+        </footer>
         <script src="src/app/scripts.js"></script>
     </body>
 </html>
