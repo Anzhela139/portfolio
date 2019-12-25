@@ -65,7 +65,7 @@ button {
     padding: 5px 15px;
     cursor: pointer;
     &:hover {
-        background-color: $hover-color;
+        background-color: $GigasLightShade1;
     }
     a {
         text-decoration: none;
@@ -119,7 +119,7 @@ button {
 }
 
 .nav_main_menu a:hover {
-    color: $hover-color;
+    color: $GigasLightShade1;
 }
 
 .nav_icon_menu {
@@ -130,7 +130,7 @@ button {
     justify-content: center;
     align-items: flex-start;
     &:hover {
-        background-color: $hover-color;
+        background-color: $GigasLightShade1;
     }
 }
 
@@ -221,12 +221,14 @@ section {
 
 .section-1_column, .section-3_column {
     @extend %flex-column;
-    background-color: #65736E;
+    background-color: $SteelBlueDarkShade2;
     h3 {
+        color: #fff;
         text-align: center;
         width: 100%;
     }
     p {
+        color: #fff;
         text-align: center;
         width: 100%;
     }
@@ -323,11 +325,11 @@ section {
 }
 
 .control.left p, .control.right p {
-    background-color: lightGray;
+    background-color: $SteelBlueLightShade1;
     border-radius: 50%;
     padding: 5px 15px;
     &:hover {
-        background-color: gray;
+        background-color: $GigasDarkShade1;
     }
 }
 

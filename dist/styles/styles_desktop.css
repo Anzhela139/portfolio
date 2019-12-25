@@ -55,7 +55,7 @@ button {
   cursor: pointer;
 }
 button:hover {
-  background-color: #4682B4;
+  background-color: #735ab5;
 }
 button a {
   text-decoration: none;
@@ -107,7 +107,7 @@ button a {
 }
 
 .nav_main_menu a:hover {
-  color: #4682B4;
+  color: #735ab5;
 }
 
 .nav_icon_menu {
@@ -119,7 +119,7 @@ button a {
   align-items: flex-start;
 }
 .nav_icon_menu:hover {
-  background-color: #4682B4;
+  background-color: #735ab5;
 }
 
 .nav_profile_menu {
@@ -207,13 +207,15 @@ section {
 }
 
 .section-1_column, .section-3_column {
-  background-color: #65736E;
+  background-color: #2f568f;
 }
 .section-1_column h3, .section-3_column h3 {
+  color: #fff;
   text-align: center;
   width: 100%;
 }
 .section-1_column p, .section-3_column p {
+  color: #fff;
   text-align: center;
   width: 100%;
 }
@@ -309,12 +311,12 @@ section {
 }
 
 .control.left p, .control.right p {
-  background-color: lightGray;
+  background-color: #7da9d8;
   border-radius: 50%;
   padding: 5px 15px;
 }
 .control.left p:hover, .control.right p:hover {
-  background-color: gray;
+  background-color: #573a8f;
 }
 
 .control.right {

@@ -54,9 +54,6 @@ button {
   padding: 5px 15px;
   cursor: pointer;
 }
-button:hover {
-  background-color: #4682B4;
-}
 button a {
   text-decoration: none;
   color: #fff;
@@ -108,7 +105,7 @@ button a {
   top: 20%;
   width: 100%;
   height: auto;
-  background-color: rgba(70, 130, 180, 0.7);
+  background-color: rgba(47, 86, 143, 0.7);
 }
 .header-menu nav .nav_main_menu li a {
   display: block;
@@ -162,12 +159,9 @@ button a {
 .header-menu nav .nav_main_menu-mobile .btn-burger_menu_cross span:nth-child(3) {
   transform: rotate(-45deg);
 }
-.header-menu nav .nav_main_menu-mobile button:hover {
-  background-color: rgba(70, 130, 180, 0.3);
-}
 
 .nav_main_menu a:hover {
-  color: #4682B4;
+  color: #735ab5;
 }
 
 .nav_icon_menu {
@@ -179,7 +173,7 @@ button a {
   align-items: flex-start;
 }
 .nav_icon_menu:hover {
-  background-color: #4682B4;
+  background-color: #735ab5;
 }
 
 .nav_profile_menu {
@@ -269,10 +263,11 @@ section {
 }
 
 .section-1_column, .section-3_column {
-  background-color: #65736E;
+  background-color: #2f568f;
   margin-top: 3%;
   height: auto;
   padding-bottom: 3%;
+  color: #fff;
 }
 .section-1_column h3, .section-3_column h3 {
   text-align: center;
