@@ -317,9 +317,9 @@ section {
     display: none;
   }
 }
-.section-3_img_example {
+.section-1_img_example, .section-3_img_example {
   width: 75%;
-  height: 27%;
+  height: auto;
 }
 
 .section-4 {
