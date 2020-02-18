@@ -44,6 +44,11 @@ body {
     font-family: $text-font;
 }
 
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 header {
     width: 100vw;
     height: 100vh;
@@ -202,7 +207,7 @@ main {
 
 section {
     width: 100%;
-    height: 150vh;
+
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -213,7 +218,7 @@ section {
 .section-1_wrapper, .section-3_wrapper, .section-4_wrapper {
     @extend %flex-wrapper;
     height: auto;
-    width: 85%;
+    width: 100%;
 }
 
 .section-1_title, 
@@ -239,6 +244,10 @@ section {
     p {
         text-align: center;
         width: 100%;
+    }
+    img {
+        width: 85%;
+        height: 85%;
     }
 } 
 
@@ -296,7 +305,6 @@ section {
     font-size: 1.35rem;
     justify-content: space-between;
     img {
-        width: 70%;
         height: 70%;
     }
 }

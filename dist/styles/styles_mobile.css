@@ -32,6 +32,11 @@ body {
   font-family: "Noto Sans", "Roboto", "Ubuntu", sans-serif;
 }
 
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 header {
   width: 100vw;
   height: 100vh;
@@ -186,7 +191,6 @@ main {
 
 section {
   width: 100%;
-  height: 150vh;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -196,7 +200,7 @@ section {
 
 .section-1_wrapper, .section-3_wrapper, .section-4_wrapper {
   height: auto;
-  width: 85%;
+  width: 100%;
 }
 
 .section-1_title,
@@ -222,6 +226,10 @@ section {
 .section-1_column p, .section-3_column p {
   text-align: center;
   width: 100%;
+}
+.section-1_column img, .section-3_column img {
+  width: 85%;
+  height: 85%;
 }
 
 .section-2 {
@@ -279,7 +287,6 @@ section {
   justify-content: space-between;
 }
 .description img {
-  width: 70%;
   height: 70%;
 }
 
