@@ -43,6 +43,11 @@ body {
     font-family: $text-font;
 }
 
+html {
+    width: 98vw;
+    overflow-x: hidden;
+}
+
 header {
     width: 100vw;
     height: 100vh;
