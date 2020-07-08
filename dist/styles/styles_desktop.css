@@ -32,6 +32,11 @@ body {
   font-family: "Noto Sans", "Roboto", "Ubuntu", sans-serif;
 }
 
+html {
+  width: 98vw;
+  overflow-x: hidden;
+}
+
 header {
   width: 100vw;
   height: 100vh;
@@ -63,15 +68,19 @@ button a {
 }
 
 .header-menu {
-  width: 85%;
+  width: 95%;
   display: flex;
   align-items: flex-start;
   margin-top: 5%;
+  position: relative;
 }
 .header-menu nav {
-  width: 100%;
-  height: auto;
-  position: relative;
+  width: min(90%, 1180px);
+  height: min(90vh, 860px);
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
   display: flex;
   justify-content: space-between;
   align-content: flex-start;
@@ -79,6 +88,7 @@ button a {
 }
 .header-menu nav ul {
   display: flex;
+  position: fixed;
   margin: 0;
   padding: 0;
 }
@@ -94,8 +104,35 @@ button a {
 .header-menu nav ul li a :hover {
   color: #f6f6f6;
 }
+.header-menu nav ul.nav_main_menu {
+  width: min(90%, 1130px);
+  margin: 0 auto;
+}
+.header-menu nav ul.nav_soc_or_menu {
+  flex-direction: column;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header-menu nav ul.nav_soc_or_menu li {
+  margin-bottom: 1rem;
+}
+.header-menu nav ul.nav_soc_wor_menu {
+  width: min(90%, 1180px);
+  display: flex;
+  justify-content: space-around;
+  top: 87%;
+}
 .header-menu nav .nav_main_menu-mobile {
   display: none;
+}
+.header-menu button.counter {
+  position: fixed;
+  top: 86.5%;
+  right: 10%;
+  font-size: 1.3rem;
+  padding: 0 25px;
+  font-weight: lighter;
+  z-index: 5;
 }
 
 .nav_main_menu {
@@ -112,6 +149,8 @@ button a {
 
 .header-wrapper {
   margin: 0;
+  margin-top: -5%;
+  height: min(50%, 470px);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

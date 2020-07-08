@@ -183,7 +183,65 @@ let burgerButton = document.querySelector('#btn-burger_menu');
 let layersBurgerButton = document.querySelector('.nav-menu_burger');
 
 burgerButton.onclick = function() {
-    burgerButton.classList.toggle('.btn-burger_menu_cross');
-    menuMobile.classList.toggle('.active');
+    burgerButton.classList.toggle('btn-burger_menu_cross');
+    menuMobile.classList.toggle('active');
     menuMobile.classList.toggle('hide-menu');
 };
+
+$(window).on("scroll resize", function() {
+var offsetSection1 = $("#mySkillset").offset();
+var offsetSection2 = $("#myWorks").offset();
+var offsetSection3 = $("#priceList").offset();
+var offsetSection4 = $("#contacts").offset();
+var headerHeight = $(".header").height();
+//var o = ($(window).scrollTop() - offsetSection1.top) / ($("#mySkillsetv").height() - $(window).height());
+var o = $(window).scrollTop() - offsetSection1.top;
+var b = $(window).scrollTop() - offsetSection2.top;
+var a = $(window).scrollTop() - offsetSection3.top;
+var c = $(window).scrollTop() - offsetSection4.top;
+console.log(o);
+if(o>(headerHeight/2)){
+    $(".nav_soc_wor_menu>li>a").animate({color: '#4c2e7e'}, 10);
+    $(".nav_soc_wor_menu>li>a").css({
+        'font-weight':'bold',
+    });
+    $(".counter").animate({color: '#4c2e7e',}, 10);
+    $(".counter").css({
+        'font-weight':'bold',
+        border: '2px solid #4c2e7e'
+    });
+}
+else if(o>0){
+    $(".nav_main_menu>li>a").animate({color: '#4c2e7e'}, 10);
+    $(".nav_main_menu>li>a").css({
+        'font-weight':'bold',
+    });
+    $(".nav_soc_or_menu>li>a").animate({color: '#4c2e7e'}, 10);
+    $(".nav_soc_or_menu>li>a").css({
+        'font-weight':'bold',
+    });
+}
+else if (o<=0){
+    $(".nav_main_menu>li>a").animate({color: '#ffffff'}, 10);
+    $(".nav_main_menu>li>a").css({
+        'font-weight':'normal',
+    });
+    $(".nav_soc_or_menu>li>a").animate({color: '#ffffff'}, 10);
+    $(".nav_soc_or_menu>li>a").css({
+        'font-weight':'normal',
+    });
+    $(".nav_soc_wor_menu>li>a").animate({color: '#ffffff'}, 10);
+    $(".nav_soc_wor_menu>li>a").css({
+        'font-weight':'normal',
+    });
+    $(".counter").animate({color: '#ffffff',}, 10);
+    $(".counter").css({
+        'font-weight':'normal',
+        border: '1px solid #ffffff'
+    });
+}
+
+if (o>0){
+    $(".counter").textContent = "02";
+}
+})
