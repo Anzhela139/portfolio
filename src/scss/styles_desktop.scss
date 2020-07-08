@@ -4,7 +4,7 @@ $GigasLightShade2: rgba(99, 71, 160);
 $GigasDarkShade1: rgba(87, 58, 143);
 $GigasDarkShade2: rgba(76, 46, 126);
 
-$SteelBlueLightShade1: rgba(125, 169, 216);
+$SteelBlueLightShade1: rgb(125, 169, 216);
 $SteelBlueLightShade2: rgba(92, 136, 189);
 $SteelBlueDarkShade1:rgba(69, 111, 167);
 $SteelBlueDarkShade2: rgba(47, 86, 143);
@@ -79,20 +79,25 @@ button {
 }
 
 .header-menu {
-    width: 85%;
+    width: 95%;
     display: flex;
     align-items: flex-start;
     margin-top: 5%;
+    position: relative;
     nav {
-        width: 100%;
-        height: auto;
-        position: relative;
+        width: min(90%, 1180px);
+        height: min(90vh, 860px);
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5;
         display: flex;
         justify-content: space-between;
         align-content: flex-start;
         flex-wrap: wrap;
         ul {
             display: flex;
+            position: fixed;
             margin: 0;
             padding: 0;
             li {
@@ -108,10 +113,36 @@ button {
                 }
             }
         }
-        
+        ul.nav_main_menu{
+            width: min(90%, 1130px);
+            margin: 0 auto;
+        }
+        ul.nav_soc_or_menu {
+            flex-direction: column;
+            top: 50%;
+            transform: translateY(-50%);
+            li{
+                margin-bottom: 1rem;
+            }
+        }
+        ul.nav_soc_wor_menu {
+            width: min(90%, 1180px);
+            display: flex;
+            justify-content: space-around;
+            top: 87%;
+        }
         .nav_main_menu-mobile {
             display: none;
         }
+    }
+    button.counter {
+        position: fixed;
+        top: 86.5%;
+        right: 10%;
+        font-size: 1.3rem;
+        padding: 0 25px;
+        font-weight: lighter;
+        z-index: 5;
     }
 }
 
@@ -129,6 +160,8 @@ button {
 
 .header-wrapper {
     margin: 0;
+    margin-top: -5%;
+    height: min(50%, 470px);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
