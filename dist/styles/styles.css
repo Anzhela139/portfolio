@@ -164,10 +164,7 @@ button a {
   flex-wrap: wrap;
   z-index: 5;
 }
-.header-wrapper h1 {
-  width: 100%;
-  text-align: center;
-}
+.header-wrapper h1,
 .header-wrapper p {
   text-align: center;
   width: 100%;
@@ -204,8 +201,7 @@ section {
 .section__column {
   border: 2px solid rgb(87, 58, 143);
   border-radius: 7px;
-  box-shadow: inset 0px 0px 4px 0px rgba(255, 255, 255, 0.5);
-  box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0px 0px 4px 0px rgba(255, 255, 255, 0.5), 0px 0px 4px 0px rgba(255, 255, 255, 0.5);
 }
 .section__column h3 {
   color: #fff;
@@ -380,22 +376,10 @@ footer .footer-nav_sm_icons {
   justify-content: space-between;
   width: 85%;
 }
-footer .footer-nav_sm_icons a {
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-}
-footer .footer-nav_sm_icons a span {
-  font-size: 1.15rem;
-}
-footer .footer-nav_sm_icons a span:hover {
-  background-color: rgb(115, 90, 181);
-  color: #fff;
-  text-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.5);
-}
 footer p {
   width: 85%;
   text-align: center;
+  color: #fff;
 }
 
 @media (max-width: 640px) {
@@ -408,14 +392,11 @@ footer p {
   .header-menu {
     width: 100%;
     height: auto;
-    display: flex;
-    align-items: flex-start;
-    position: relative;
     top: 0;
   }
   .header-menu nav {
     width: 100%;
-    height: 70vh;
+    height: 40vh;
     position: relative;
     top: 0;
     display: flex;
@@ -490,6 +471,7 @@ footer p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    pointer-events: all;
   }
   .header-menu nav .nav_main_menu-mobile button span {
     display: block;
@@ -519,69 +501,27 @@ footer p {
     transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
   }
   .header-wrapper {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 85%;
-    flex-wrap: wrap;
-    position: absolute;
     top: 40%;
   }
-  .header-wrapper h1 {
-    width: 100%;
-    text-align: center;
-  }
-  .header-wrapper p {
-    text-align: center;
-    width: 100%;
-  }
-  main {
-    width: 100vw;
-  }
   section {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    position: relative;
-    margin-top: 5%;
     height: auto;
     margin-bottom: 2rem;
   }
   .section__wrapper {
-    width: 85%;
-    display: flex;
     flex-direction: column;
     align-items: center;
     height: auto;
     width: 100%;
     gap: 0.5rem;
   }
-  .section-1_title,
-  .section-2_title,
-  .section-3_title {
-    width: 100%;
-    text-align: center;
+  .section__title {
     height: auto;
   }
   .section__column {
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     width: 85%;
     margin-top: 3%;
     height: auto;
     padding-bottom: 3%;
-  }
-  .section__column h3 {
-    text-align: center;
-    width: 100%;
-  }
-  .section__column p {
-    text-align: center;
-    width: 100%;
   }
   .section__column img {
     width: 85%;
@@ -590,182 +530,11 @@ footer p {
   .section-2 {
     height: 50vh;
   }
-  .section-2 .section-2_title {
-    font-size: 1.75rem;
-    margin: 0 auto;
-    height: auto;
-  }
   .section-2 .section-2_wrapper {
-    position: relative;
-    width: 90%;
     height: 85%;
-  }
-  .carousel {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-  }
-  .item-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  .item {
-    display: none;
-    position: relative;
-    margin: 0 auto;
-    animation: 0.5s ease-in-out;
-  }
-  .active,
-  .next {
-    display: block;
-  }
-  .next {
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-  .description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.35rem;
-    justify-content: space-between;
-  }
-  .description img {
-    height: 70%;
-  }
-  .project-name {
-    padding: 10px;
-  }
-  .control {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 15%;
-    cursor: pointer;
-  }
-  .control.left {
-    left: 0;
-    right: auto;
-  }
-  .control.left p,
-  .control.right p {
-    background-color: lightGray;
-    border-radius: 50%;
-    padding: 5px 15px;
-  }
-  .control.left p:hover,
-  .control.right p:hover {
-    background-color: gray;
-  }
-  .control.right {
-    right: 0;
-    left: auto;
-  }
-  .arrow.right {
-    right: 50%;
-  }
-  .to-left {
-    animation-name: left;
-  }
-  .to-right {
-    animation-name: right;
-    animation-direction: reverse;
-  }
-  .from-left {
-    animation-name: left;
-    animation-direction: reverse;
-  }
-  .from-right {
-    animation-name: right;
-  }
-  @keyframes left {
-    from {
-      left: 0;
-    }
-    to {
-      left: -100%;
-    }
-  }
-  @keyframes right {
-    from {
-      left: 100%;
-    }
-    to {
-      left: 0;
-    }
-  }
-  .arrow {
-    display: none;
   }
   .section-3_img_example {
     width: 80%;
-    height: auto;
-  }
-  .section-4 {
-    background-color: rgb(125, 169, 216);
-    height: auto;
-    padding-bottom: 5%;
-  }
-  .section-4 .section-4_title {
-    padding: 20px 0;
-  }
-  .section-4_img_wrapper {
-    display: none;
-  }
-  .section-4 #contact_form {
-    padding-top: 20px;
-    width: 85%;
-    padding-left: 2%;
-    background-color: rgb(47, 86, 143);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: flex-start;
-    color: #fff;
-    padding-bottom: 3%;
-  }
-  .section-4 #contact_form label {
-    padding-bottom: 2%;
-    display: block;
-    width: 80%;
-  }
-  .section-4 #contact_form #contacts_email {
-    width: 80%;
-    height: 4%;
-    appearance: none;
-    outline: none;
-    font-size: 1rem;
-  }
-  .section-4 #contact_form #contacts_email:invalid {
-    border: none;
-    border: 1 solid #8D1D2C;
-  }
-  .section-4 #contact_form .error {
-    display: block;
-    background-color: #f6f6f6;
-    padding: 5px;
-    width: 80%;
-  }
-  footer {
-    height: 15vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: space-around;
-    flex-wrap: wrap;
-  }
-  footer .footer-nav_sm_icons {
-    display: flex;
-    justify-content: space-between;
-    width: 85%;
-  }
-  footer .footer-nav_sm_icons a span {
-    font-size: 1.15rem;
   }
   footer p {
     width: 85%;
