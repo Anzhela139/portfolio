@@ -330,7 +330,7 @@ footer {
     width: 85%; }
   footer p {
     width: 85%;
-    text-align: center;
+    text-align: left;
     color: #fff; }
 
 @media (max-width: 640px) {
