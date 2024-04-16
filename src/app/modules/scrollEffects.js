@@ -5,8 +5,9 @@ class ScrollEffects {
         this.navMainMenu = $(".nav_main_menu > li > a");
         this.navMainOrMenu = $(".nav_soc_or_menu>li>a");
         this.counterQ = $(".counter");
-        this.white = '#ffffff';
-        this.accent = '#4c2e7e';
+        this.colorScheme = "light";
+        this.white = "#ffffff";
+        this.accent = "#4c2e7e";
 
         this.init();
     }
@@ -16,6 +17,12 @@ class ScrollEffects {
      */
     init() {
         $(window).on("scroll resize", this.handleScroll.bind(this));
+        if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            this.colorScheme = "dark";
+        }
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", event => {
+            this.colorScheme = event.matches ? "dark" : "light";
+        });
     }
 
     /**
@@ -50,18 +57,22 @@ class ScrollEffects {
      * @param {Boolean} isForward - стили изменять вперед/обратно
      */
     handleChange( el, isBorder, isForward ) {
-        if(isForward) {
-            el.animate({ color: this.accent }, 10);
-            el.css({
-                'font-weight': 'bold',
-                ...(isBorder && {border: `1px solid ${this.accent}`})
-            });
-        } else {
-            el.animate({ color: this.white }, 10);
-            el.css({
-                'font-weight': 'normal',
-                ...(isBorder && {border: `1px solid ${this.white}`})
-            });
+        console.log(this.colorScheme)
+        if (this.colorScheme === "light") {
+            if(isForward) {
+                el.animate({ color: this.accent }, 10);
+    
+                el.css({
+                    "font-weight": "bold",
+                    ...(isBorder && {border: `1px solid ${this.accent}`})
+                });
+            } else {
+                el.animate({ color: this.white }, 10);  
+                el.css({
+                    "font-weight": "normal",
+                    ...(isBorder && {border: `1px solid ${this.white}`})
+                });
+            }
         }
     }
 }
