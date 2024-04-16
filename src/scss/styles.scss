@@ -1,13 +1,13 @@
 /* sass src/scss/styles_desktop.scss dist/styles/styles_desktop.css */
-$GigasLightShade1: rgba(115, 90, 181);
-$GigasLightShade2: rgba(99, 71, 160);
-$GigasDarkShade1: rgba(87, 58, 143);
-$GigasDarkShade2: rgba(76, 46, 126);
+$GigasLightShade1: rgb(115, 90, 181);
+$GigasLightShade2: rgb(99, 71, 160);
+$GigasDarkShade1: rgb(87, 58, 143);
+$GigasDarkShade2: rgb(76, 46, 126);
 
 $SteelBlueLightShade1: rgb(125, 169, 216);
-$SteelBlueLightShade2: rgba(92, 136, 189);
-$SteelBlueDarkShade1: rgba(69, 111, 167);
-$SteelBlueDarkShade2: rgba(47, 86, 143);
+$SteelBlueLightShade2: rgb(92, 136, 189);
+$SteelBlueDarkShade1: rgb(69, 111, 167);
+$SteelBlueDarkShade2: rgb(47, 86, 143);
 $hover-color: #4682B4;
 $color16: #161616;
 $text-font: "Noto Sans", "Roboto", "Ubuntu", sans-serif;
@@ -61,6 +61,7 @@ header {
     position: relative;
     z-index: 5;
     pointer-events: none;
+    align-items: center;
 }
 
 button {
@@ -86,83 +87,88 @@ button {
 }
 
 .header-menu {
-    width: 95%;
-    display: flex;
-    align-items: flex-start;
-    margin-top: 5%;
-    position: relative;
-    z-index: 2;
-
-    nav {
-        width: min(90%, 1180px);
-        height: min(90vh, 860px);
-        position: fixed;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    padding: 16px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    ul {
         display: flex;
-        justify-content: space-between;
-        align-content: flex-start;
-        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        pointer-events: all;
+        width: fit-content;
+        backdrop-filter: blur(5px);
 
-        ul {
-            display: flex;
-            position: fixed;
-            margin: 0;
-            padding: 0;
-            pointer-events: all;
+        li {
+            list-style: none;
 
-            li {
-                list-style: none;
+            a {
+                color: white;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 1.25rem;
 
-                a {
-                    color: white;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    font-size: 1.25rem;
-
-                    :hover {
-                        color: #f6f6f6;
-                    }
+                :hover {
+                    color: #f6f6f6;
                 }
             }
         }
+    }
 
-        ul.nav_main_menu {
-            margin: 0 auto;
-        }
+    ul.nav_main_menu {
+        margin: 0 auto;
+        grid-column: 2;
+        grid-row: 1;
+        align-self: start;
+        justify-self: center;
+        column-gap: 1.5rem;
+    }
 
-        ul.nav_soc_or_menu {
-            flex-direction: column;
-            top: 50%;
-            transform: translateY(-50%);
-
-            li {
-                margin-bottom: 1rem;
-            }
-        }
-
-        ul.nav_soc_wor_menu {
-            width: min(90%, 1180px);
-            display: flex;
-            justify-content: space-around;
-            top: 87%;
-        }
-
-        .nav_main_menu-mobile {
-            display: none;
+    ul.nav_soc_or_menu {
+        flex-direction: column;
+        grid-column: 1;
+        grid-row: 2;
+        align-self: center;
+        li {
+            margin-bottom: 1rem;
         }
     }
 
+    ul.nav_soc_wor_menu {
+
+        display: flex;
+        justify-content: space-around;
+        top: 87%;
+        grid-column: 2;
+        grid-row: 3;
+        column-gap: 1.5rem;
+        align-self: end;
+        justify-self: center;
+    }
+
+    .nav_main_menu-mobile {
+        display: none;
+    }
+
     button.counter {
-        position: fixed;
-        top: 86.5%;
-        right: 10%;
+        display: flex;
+        width: 76px;
+        height: 36px;
         font-size: 1.3rem;
         padding: 0 25px;
         font-weight: lighter;
         z-index: 5;
         pointer-events: all;
+        grid-column: 3;
+        grid-row: 3;
+        align-self: end;
+        justify-self: end;
     }
 }
 
@@ -181,7 +187,7 @@ button {
 .header-wrapper {
     margin: 0;
     margin-top: -5%;
-    height: min(50%, 470px);
+
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -189,6 +195,8 @@ button {
     width: 85%;
     flex-wrap: wrap;
     z-index: 5;
+    height: fit-content;
+    row-gap: 2rem;
 
     h1,
     p {
@@ -418,7 +426,7 @@ footer {
 
     p {
         width: 85%;
-        text-align: center;
+        text-align: left;
         color: #fff;
     }
 }

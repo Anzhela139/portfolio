@@ -1,3 +1,4 @@
+import "./../scss/styles.scss";
 import Carousel from "./modules/carousel";
 import ScrollEffects from "./modules/scrollEffects";
 
